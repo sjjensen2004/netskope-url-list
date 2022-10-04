@@ -4,7 +4,7 @@ This takes the URL list from [https://urlhaus.abuse.ch/downloads/csv_online/], p
 
 ## What do I need to use this?
 
-Docker and Docker Compose installed on your host.
+Docker and Docker Compose installed on your host and a Netskope tenant. 
 
 ## How do I use this?
 
