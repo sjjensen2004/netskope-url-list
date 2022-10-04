@@ -59,7 +59,7 @@ def post_url_list(list):
 
     r = requests.post(f"{URL}/api/v2/policy/urllist", headers=headers, data=json.dumps(body))
 
-    print(r.text)
+    return r.text
 
 if __name__ == "__main__":
     logger.info("Populating the Haus URL list")
@@ -67,5 +67,6 @@ if __name__ == "__main__":
     logger.info("Parsing the Haus DB, sanitizing, and returning a list of URLs")
     url_list = parse_url_list()
     logger.info("Posting the URL list to your Netskope Tenant")
-    post_url_list(url_list)
+    post_to_tenant = post_url_list(url_list)
+    logger.info(post_to_tenant)
     
