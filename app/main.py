@@ -3,6 +3,7 @@ import logging
 import json
 import os
 import csv
+from urllib import parse
 
 # Grab env vars
 TOKEN = os.environ.get("NETSKOPE_TOKEN")
@@ -37,7 +38,9 @@ def parse_url_list():
         for row in data:
             # This is real dirty, for production workloads, spend more time parsing the list
             if row[2] != "url" and "^" not in row[2] and ":1636/4" not in row[2]:
-                url_list.append(row[2])
+                preparseurl = row[2].strip('"')
+                encodeurl = urllib.parse.quote(preparseurl, safe='/:')
+                url_list.append(encodeurl)
     
     return url_list
 
