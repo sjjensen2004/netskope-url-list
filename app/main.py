@@ -3,16 +3,17 @@ import logging
 import json
 import os
 import csv
+import urllib
 from urllib import parse
 
 # Grab env vars
-TOKEN = os.environ.get("NETSKOPE_TOKEN")
-URL = os.environ.get("TENANT_URL")
+TOKEN = "440e9ee400b6b447af2ead30187fd142"
+URL = "https://john.eu.goskope.com"
 URLHAUS = "https://urlhaus.abuse.ch/downloads/csv_online/"
 
 # Setup the logger
 logging.basicConfig(format='%(asctime)s - %(message)s',
-                    filename='../logs/request.log', level=logging.DEBUG)
+                    filename='logs/request.log', level=logging.DEBUG)
 # Spit logs to console
 console = logging.StreamHandler()
 console.setLevel(logging.INFO)
