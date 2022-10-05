@@ -7,8 +7,8 @@ import urllib
 from urllib import parse
 
 # Grab env vars
-TOKEN = "440e9ee400b6b447af2ead30187fd142"
-URL = "https://john.eu.goskope.com"
+TOKEN = <token>
+URL = "https://<tenant>.goskope.com"
 URLHAUS = "https://urlhaus.abuse.ch/downloads/csv_online/"
 
 # Setup the logger
